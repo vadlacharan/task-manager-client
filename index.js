@@ -21,9 +21,7 @@ app.use('/api/todos', todoRoutes);
 
 
 
-app.get("/", (req,res)=>{
-    console.log("Hello World");
-})
+
 
 
 app.post('/register', async (req, res) => {
