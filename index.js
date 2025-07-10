@@ -10,7 +10,7 @@ const prisma = require('./lib/prisma');
 const bcrypt = require('bcrypt');
 const isAuthenticated = require('./middleware/authMiddlware');
 app.use(cors({
-  origin: 'http://localhost:3000', // or your deployed frontend URL
+  origin: 'https://task-manager-server-sand.vercel.app/', // or your deployed frontend URL
   credentials: true // Important for sending cookies
 }));
 app.use(express.json());
