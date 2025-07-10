@@ -91,7 +91,7 @@ app.post('/login', async (req, res) => {
       data: {
         id: sessionToken, 
         userId: user.id,
-        expires:expiresAt
+        expires:expiresAt,
       },
     });
 
@@ -100,6 +100,7 @@ app.post('/login', async (req, res) => {
       httpOnly: true,
       secure: true,
       expires: expiresAt,
+      sameSite:'None'
     });
 
     return res.status(200).json({ message: 'Login successful.' });
